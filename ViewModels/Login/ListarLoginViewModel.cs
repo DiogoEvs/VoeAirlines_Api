@@ -1,21 +1,17 @@
 namespace VoeAirlines.ViewModels;
-public class ListarrLoginViewModel
+public class ListarLoginViewModel
 {
 
- public ListarsLoginViewModel(string usuario, string senha, DateTime dataCriacao)
+ public ListarLoginViewModel(string? usuario,  DateTime dataCriacao)
     {
+        
         Usuario = usuario;
+        
         DataCriacao = dataCriacao;
     }
     
-    
     public string? Usuario { get; set; }
-
-   
 
     public DateTime DataCriacao { get; set; } = DateTime.Now;
 
-    
-
-   
 }
