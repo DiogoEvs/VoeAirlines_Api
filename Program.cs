@@ -36,6 +36,8 @@ builder.Services.AddTransient<ExcluirManutencaoValidator>();
 
 builder.Services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
 
+builder.Services.AddCors();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -47,6 +49,15 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+ app.UseCors(
+    c=>{
+        c.AllowAnyHeader();
+        c.AllowAnyMethod();
+        c.AllowAnyOrigin();
+    }
+
+  );
+  
 app.UseAuthorization();
 
 app.MapControllers();
