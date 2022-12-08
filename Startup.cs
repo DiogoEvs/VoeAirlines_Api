@@ -37,7 +37,7 @@ namespace ApiCors
             {
                 options.AddPolicy(name: _MyCors, builder =>
                 {
-                   // builder.WithOrigins("http://jonatasx-001-site1.ftempurl.com");
+                   // builder.WithOrigins("http://diogoestudante-001-site1.gtempurl.com");
                    builder.SetIsOriginAllowed(origin => new Uri (origin).Host =="logalhost")
                    .AllowAnyHeader().AllowAnyMethod();
 

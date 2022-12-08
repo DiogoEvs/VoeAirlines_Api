@@ -36,7 +36,9 @@ builder.Services.AddTransient<ExcluirManutencaoValidator>();
 
 builder.Services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
 
+#region [Cors]
 builder.Services.AddCors();
+#endregion
 
 var app = builder.Build();
 
@@ -49,15 +51,18 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
- app.UseCors(
-    c=>{
-        c.AllowAnyHeader();
-        c.AllowAnyMethod();
-        c.AllowAnyOrigin();
-    }
+#region [Cors]
+app.UseCors(
+   c =>
+   {
+       c.AllowAnyHeader();
+       c.AllowAnyMethod();
+       c.AllowAnyOrigin();
+   }
 
-  );
-  
+ );
+#endregion
+
 app.UseAuthorization();
 
 app.MapControllers();
