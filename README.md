@@ -30,7 +30,8 @@ A UI do Swagger estará disponível na URL https://localhost:[porta]/swagger (a 
 **Consumir os endpoints**
 Sugestão de ordem para testar a aplicação:
 
-1) Criar, editar e excluir Aeronaves
-2) Criar, editar e excluir Manutenção
-3) Criar, editar e excluir Piloto
-4) Criar, editar e excluir Voo
+1) Criar, editar e excluir Login
+2) Criar, editar e excluir Aeronaves
+3) Criar, editar e excluir Manutenção
+4) Criar, editar e excluir Piloto
+5) Criar, editar e excluir Voo
