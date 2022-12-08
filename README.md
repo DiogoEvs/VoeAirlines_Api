@@ -4,7 +4,7 @@
 
 **Clonar o repositório**
 ```
-git clone https://github.com/romulosilvestre/gabarito-api-dev-csharp.git
+git clone https://github.com/DiogoEvs/VoeAirlines_Api.git
 ```
 
 **Restaurar os pacotes**
