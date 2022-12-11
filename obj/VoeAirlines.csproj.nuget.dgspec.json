@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\diogo\\source\\repos\\api-dev-csharp\\VoeAirlines.csproj": {}
+    "C:\\Users\\diogo\\source\\repos\\VoeAirlines_Api\\VoeAirlines.csproj": {}
   },
   "projects": {
-    "C:\\Users\\diogo\\source\\repos\\api-dev-csharp\\VoeAirlines.csproj": {
+    "C:\\Users\\diogo\\source\\repos\\VoeAirlines_Api\\VoeAirlines.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diogo\\source\\repos\\api-dev-csharp\\VoeAirlines.csproj",
+        "projectUniqueName": "C:\\Users\\diogo\\source\\repos\\VoeAirlines_Api\\VoeAirlines.csproj",
         "projectName": "VoeAirlines",
-        "projectPath": "C:\\Users\\diogo\\source\\repos\\api-dev-csharp\\VoeAirlines.csproj",
+        "projectPath": "C:\\Users\\diogo\\source\\repos\\VoeAirlines_Api\\VoeAirlines.csproj",
         "packagesPath": "C:\\Users\\diogo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diogo\\source\\repos\\api-dev-csharp\\obj\\",
+        "outputPath": "C:\\Users\\diogo\\Source\\Repos\\VoeAirlines_Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\diogo\\AppData\\Roaming\\NuGet\\NuGet.Config",

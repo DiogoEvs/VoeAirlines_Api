@@ -1,6 +1,7 @@
 using VoeAirlines.Services;
 using VoeAirlines.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using VoeAirlines.Entities;
 
 
 [Route("api/login")]
@@ -20,7 +21,7 @@ public class LoginController:ControllerBase{
     public IActionResult AdicionarLogin(AdicionarLoginViewModel dados)
     {
         var login = _loginService.AdicionarLogin(dados);
-        return Ok(_loginService.ListarLogin());
+        return CreatedAtAction(nameof(ListarLoginPeloId), new { id = login.Id }, login);
     }
     
     [HttpGet]
@@ -30,9 +31,9 @@ public class LoginController:ControllerBase{
     }
 
     [HttpGet("{id}")]
-    public IActionResult ListarLogin(int id)
+    public IActionResult ListarLoginPeloId(int id)
     {
-        var login = _loginService.ListarLogin(id);
+        var login = _loginService.ListarLoginPeloId(id);
 
         if(login != null)
         {

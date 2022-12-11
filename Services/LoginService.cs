@@ -38,7 +38,7 @@ public class LoginService
         return _context.Logins.Select(l => new ListarLoginViewModel(l.Id, l.Usuario, l.DataCriacao));
     }
 
-    public DetalhesLoginViewModel? ListarLogin(int id)
+    public DetalhesLoginViewModel? ListarLoginPeloId(int id)
     {
         var login = _context.Logins.Find(id);
 
