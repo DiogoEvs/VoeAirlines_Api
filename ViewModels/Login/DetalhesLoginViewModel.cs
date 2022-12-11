@@ -2,11 +2,10 @@ namespace VoeAirlines.ViewModels;
 public class DetalhesLoginViewModel
 {
 
- public DetalhesLoginViewModel(int id,string? usuario, DateTime dataCriacao)
+ public DetalhesLoginViewModel(int id, string? usuario, DateTime dataCriacao)
     {
         Id= id;
         Usuario = usuario;
-        
         DataCriacao = dataCriacao;
     }
     
