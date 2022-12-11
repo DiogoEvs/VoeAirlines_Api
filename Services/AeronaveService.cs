@@ -41,7 +41,7 @@ public class AeronaveService
 
     public IEnumerable<ListarAeronaveViewModel> ListarAeronaves()
     {
-        return _context.Aeronaves.Select(a => new ListarAeronaveViewModel(a.Id, a.Fabricante,a.Modelo, a.Codigo));
+        return _context.Aeronaves.Select(a => new ListarAeronaveViewModel(a.Id, a.Modelo, a.Codigo));
     }
 
     public DetalhesAeronaveViewModel? ListarAeronavePeloId(int id)
@@ -52,9 +52,9 @@ public class AeronaveService
         {
             return new DetalhesAeronaveViewModel
             (
-                aeronave.Id,
-                aeronave.Fabricante,
-                aeronave.Modelo,
+                aeronave.Id, 
+                aeronave.Fabricante, 
+                aeronave.Modelo, 
                 aeronave.Codigo
             );
         }
