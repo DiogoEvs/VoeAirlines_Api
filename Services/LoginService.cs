@@ -35,7 +35,55 @@ public class LoginService
 
     public IEnumerable<ListarLoginViewModel> ListarLogin()
     {
-        return _context.Logins.Select(l => new ListarLoginViewModel(l.Usuario,l.DataCriacao));
+        return _context.Logins.Select(l => new ListarLoginViewModel(l.Id, l.Usuario, l.DataCriacao));
     }
 
+    public DetalhesLoginViewModel? ListarLogin(int id)
+    {
+        var login = _context.Logins.Find(id);
+
+        if (login != null)
+        {
+            return new DetalhesLoginViewModel
+            (
+                login.Id,
+                login.Usuario,
+                login.DataCriacao
+            );
+        }
+
+        return null;
+    }
+
+
+    public DetalhesLoginViewModel? AtualizarLogin(AtualizarLoginViewModel dados)
+    {
+
+        var login = _context.Logins.Find(dados.Id);
+
+        if (login != null)
+        {
+            login.Id = dados.Id;
+            login.Usuario = dados.Usuario;
+            login.Senha = dados.Senha;
+
+            _context.Update(login);
+            _context.SaveChanges();
+
+            return new DetalhesLoginViewModel(login.Id, login.Usuario, login.DataCriacao);
+        }
+
+        return null;
+    }
+
+    public void ExcluirLogin(int id)
+    {
+        var login = _context.Logins.Find(id);
+
+        if (login != null)
+        {
+            _context.Remove(login);
+            _context.SaveChanges();
+        }
+    }
 }
